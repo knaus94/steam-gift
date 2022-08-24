@@ -3,7 +3,7 @@ declare module "steam-gift" {
     /**
      * @param options Options
      */
-    constructor(options: ConstructorOptionsInterface);
+    constructor(options?: ConstructorOptionsInterface);
 
     /**
      * Store initialization
@@ -57,8 +57,8 @@ declare module "steam-gift" {
   }
 
   interface ConstructorOptionsInterface {
-    timeout: number;
-    userAgent: string;
+    timeout?: number;
+    userAgent?: string;
   }
 
   interface AddToCartInterface {
