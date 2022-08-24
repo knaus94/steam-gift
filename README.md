@@ -1,6 +1,6 @@
 # SteamGift
 
-A module for interacting with the Steam store site from Node.js. Currently not a lot of functionality is supported.
+A module for interacting with the Steam store site from Node.js.
 
 ## Logging In
 
