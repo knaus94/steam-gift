@@ -9,7 +9,7 @@ declare module "steam-gift" {
      * Store initialization
      *  @param cookies Cookie set
      */
-    setCookies(cookies: any): Promise<void>;
+    setCookies(cookies: any): void;
 
     /**
      * Removing the Cart.
