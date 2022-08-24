@@ -1,73 +1,73 @@
-declare module "steam-gift" {
-  export class SteamGift {
-    /**
-     * @param options Options
-     */
-    constructor(options?: ConstructorOptionsInterface);
+export = SteamGift;
 
-    /**
-     * Store initialization
-     *  @param cookies Cookie set
-     */
-    setCookies(cookies: any): void;
+declare class SteamGift {
+  /**
+   * @param options Options
+   */
+  constructor(options?: Options);
 
-    /**
-     * Removing the Cart.
-     */
-    forgetCart(): Promise<void>;
+  /**
+   * Store initialization
+   *  @param cookies Cookie set
+   */
+  setCookies(cookies: any): void;
 
-    /**
-     * Add game to Cart
-     *  @param subId Game Sub Id
-     */
-    addToCart(subId: number): Promise<AddToCartInterface>;
+  /**
+   * Removing the Cart.
+   */
+  forgetCart(): Promise<void>;
 
-    /**
-     * Comparing a shopping Cart with a list of items
-     */
-    checkoutGiftCart(items: CheckoutGiftCartItemsInterface[]): Promise<void>;
+  /**
+   * Add game to Cart
+   *  @param subId Game Sub Id
+   */
+  addToCart(subId: number): Promise<AddToCartInterface>;
 
-    /**
-     * Transaction initialization. Returns the Steam transaction ID if successful
-     * @param region Bot Region
-     * @param gifteeAccountID Giftee Account ID
-     * @param gifteeName Giftee Name
-     * @param giftMessage Gift Message
-     * @param giftSentiment Gift Sentiment
-     */
-    initTransaction(
-      region: string,
-      gifteeAccountID: number,
-      gifteeName: string,
-      giftMessage: string,
-      giftSentiment: string
-    ): Promise<string>;
+  /**
+   * Comparing a shopping Cart with a list of items
+   */
+  checkoutGiftCart(items: CheckoutGiftCartItemsInterface[]): Promise<void>;
 
-    /**
-     * @param count Count Items in Cart
-     * @param transid Steam Transaction ID
-     */
-    getFinalPrice(count: number, transid: string): Promise<void>;
+  /**
+   * Transaction initialization. Returns the Steam transaction ID if successful
+   * @param region Bot Region
+   * @param gifteeAccountID Giftee Account ID
+   * @param gifteeName Giftee Name
+   * @param giftMessage Gift Message
+   * @param giftSentiment Gift Sentiment
+   */
+  initTransaction(
+    region: string,
+    gifteeAccountID: number,
+    gifteeName: string,
+    giftMessage: string,
+    giftSentiment: string
+  ): Promise<string>;
 
-    /**
-     * Finalize transaction
-     * @param transid Steam Transaction ID
-     */
-    finalizeTransaction(transid: string): Promise<void>;
-  }
+  /**
+   * @param count Count Items in Cart
+   * @param transid Steam Transaction ID
+   */
+  getFinalPrice(count: number, transid: string): Promise<void>;
 
-  interface ConstructorOptionsInterface {
-    timeout?: number;
-    userAgent?: string;
-  }
+  /**
+   * Finalize transaction
+   * @param transid Steam Transaction ID
+   */
+  finalizeTransaction(transid: string): Promise<void>;
+}
 
-  interface AddToCartInterface {
-    appId: number;
-    subId: number;
-  }
+interface Options {
+  timeout?: number;
+  userAgent?: string;
+}
 
-  interface CheckoutGiftCartItemsInterface {
-    subId: number;
-    appId: number;
-  }
+interface AddToCartInterface {
+  appId: number;
+  subId: number;
+}
+
+interface CheckoutGiftCartItemsInterface {
+  subId: number;
+  appId: number;
 }
