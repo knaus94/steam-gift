@@ -14,7 +14,7 @@
     "name": "knaus94"
   },
   "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "types": "./lib/types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/knaus94/steam-gift"
