@@ -1,12 +1,30 @@
 {
-  "name": "steam-gift",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "steamstore",
+	"version": "0.0.1",
+	"description": "Steam Gift API",
+	"keywords": [
+		"steam",
+		"steam gift",
+		"steam gift bot",
+		"steampowered"
+	],
+	"homepage": "hhttps://github.com/knaus94/steam-gift",
+	"license": "MIT",
+	"author": {
+		"name": "knaus94"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/knaus94/steam-gift"
+	},
+	"dependencies": {
+		"@doctormckay/stdlib": "^1.15.0",
+		"cheerio": "^0.22.0",
+		"request": "^2.88.2",
+		"set-cookie-parser": "^2.5.1",
+		"steamid": "^2.0.0"
+	},
+	"engines": {
+		"node": ">=16.17.0"
+	}
 }
