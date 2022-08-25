@@ -60,9 +60,9 @@ declare class SteamGift {
 
   /**
    * Add to friend
-   * @param userID Steam ID
+   * @param steamId Steam ID
    */
-  addFriend(userID: string | SteamID): Promise<void>;
+  addFriend(steamId: string): Promise<void>;
 }
 
 interface Options {
