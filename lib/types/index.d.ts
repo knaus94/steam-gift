@@ -33,14 +33,14 @@ declare class SteamGift {
   /**
    * Transaction initialization. Returns the Steam transaction ID if successful
    * @param region Bot Region
-   * @param steamID Giftee SteamID
+   * @param userID Giftee Steam ID
    * @param gifteeName Giftee Name
    * @param giftMessage Gift Message
    * @param giftSentiment Gift Sentiment
    */
   initTransaction(
     region: string,
-    steamID: string | SteamID,
+    userID: string | SteamID,
     gifteeName: string,
     giftMessage: string,
     giftSentiment: string
@@ -57,6 +57,12 @@ declare class SteamGift {
    * @param transid Steam Transaction ID
    */
   finalizeTransaction(transid: string): Promise<void>;
+
+  /**
+   * Add to friend
+   * @param userID Steam ID
+   */
+  addFriend(userID: string | SteamID): Promise<void>;
 }
 
 interface Options {
