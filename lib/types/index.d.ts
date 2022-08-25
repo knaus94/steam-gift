@@ -62,7 +62,7 @@ declare class SteamGift {
    * Add to friend
    * @param steamId Steam ID
    */
-  addFriend(steamId: string): Promise<void>;
+  addFriend(steamId: string): Promise<boolean>;
 }
 
 interface Options {
