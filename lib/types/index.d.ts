@@ -1,3 +1,5 @@
+import SteamID from "steamid";
+
 export = SteamGift;
 
 declare class SteamGift {
@@ -38,7 +40,7 @@ declare class SteamGift {
    */
   initTransaction(
     region: string,
-    steamID: string,
+    steamID: string | SteamID,
     gifteeName: string,
     giftMessage: string,
     giftSentiment: string
