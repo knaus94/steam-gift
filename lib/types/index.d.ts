@@ -31,14 +31,14 @@ declare class SteamGift {
   /**
    * Transaction initialization. Returns the Steam transaction ID if successful
    * @param region Bot Region
-   * @param gifteeAccountID Giftee Account ID
+   * @param gifteeSteamID Giftee SteamID
    * @param gifteeName Giftee Name
    * @param giftMessage Gift Message
    * @param giftSentiment Gift Sentiment
    */
   initTransaction(
     region: string,
-    gifteeAccountID: number,
+    gifteeSteamID: string,
     gifteeName: string,
     giftMessage: string,
     giftSentiment: string
