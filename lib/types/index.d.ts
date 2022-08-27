@@ -70,6 +70,12 @@ declare class SteamGift {
    * @param count Items count in Transaction
    */
   getTransactionStatus(transid: string, count: number): Promise<number>;
+
+  /**
+   * Get Transaction Asset ID
+   * @param transid Steam Transaction ID
+   */
+   getTransactionAssetID(transid: string): Promise<string>;
 }
 
 interface Options {
