@@ -63,6 +63,13 @@ declare class SteamGift {
    * @param steamId Steam ID
    */
   addFriend(steamId: string): Promise<boolean>;
+
+  /**
+   * Get Transaction Status
+   * @param transid Steam Transaction ID
+   * @param count Items count in Transaction
+   */
+  getTransactionStatus(transid: string, count: number): Promise<number>;
 }
 
 interface Options {
