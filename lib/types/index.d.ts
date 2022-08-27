@@ -1,4 +1,5 @@
 import SteamID from "steamid";
+const TransResult = require('../resources/TransResult.js');
 
 export = SteamGift;
 
@@ -69,7 +70,13 @@ declare class SteamGift {
    * @param transid Steam Transaction ID
    * @param count Items count in Transaction
    */
-  getTransactionStatus(transid: string, count: number): Promise<number>;
+  getTransactionStatus(transid: string, count: number): Promise<TransResult>;
+}
+
+export enum TransResult {
+  "Invalid" = 0,
+  "Declined" = 1,
+	"None" = 2
 }
 
 interface Options {
