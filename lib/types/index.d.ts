@@ -71,19 +71,13 @@ declare class SteamGift {
    * @param transid Steam Transaction ID
    * @param count Items count in Transaction
    */
-  getTransactionStatus(transid: string, count: number): Promise<GetTransactionStatusResult>;
+  getTransactionStatus(transid: string, count: number): Promise<number>;
 
   /**
    * Return AssetID transaction in Inventory
    * @param transid Steam Transaction ID
    */
   getTransactionAssetID(transid: string): Promise<string | null>;
-}
-
-export enum GetTransactionStatusResult {
-  Invalid = 0,
-  Declined = 1,
-  None = 2,
 }
 
 interface Options {
